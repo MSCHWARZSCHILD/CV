@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae - Mayra Schwarzschild</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --title-blue: #1e40af;
+            --accent-blue: #3b82f6;
+            --light-blue: #dbeafe;
+            --text-dark: #1f2937;
+            --text-medium: #4b5563;
+            --text-light: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f9fafb;
+            color: var(--text-dark);
+            line-height: 1.75;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem 3.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .section-heading {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--title-blue);
+            border-bottom: 3px solid var(--accent-blue);
+            padding-bottom: 0.75rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .contact-link {
+            color: var(--accent-blue);
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: #2563eb;
+        }
+
+        .project-card {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-details summary {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--accent-blue);
+            cursor: default;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px dashed var(--border-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-details p, .project-details ul {
+            color: var(--text-medium);
+        }
+
+        details > summary {
+            display: block;
+        }
+
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details > summary::marker {
+            display: none;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            color: var(--text-medium);
+        }
+
+        .tech-tag {
+            background-color: var(--light-blue);
+            color: var(--title-blue);
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            border: 1px solid #bfdbfe;
+        }
+
+        .keyword {
+            font-style: italic;
+            color: var(--accent-blue);
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+            body {
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn" id="downloadBtn">Descargar PDF</button>
+    
+    <div class="cv-container" id="cv-content">
+        <section id="inicio" class="text-center py-8 mb-12 border-b border-gray-200">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3" style="font-family: 'Poppins', sans-serif;">MAYRA SCHWARZSCHILD</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-5">Diseñadora UI/UX & Gráfica | Especialista en Inteligencia Artificial</p>
+            <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+                Fusionando <em class="keyword">creatividad</em> y <em class="keyword">tecnología</em> para transformar ideas complejas en experiencias digitales <em class="keyword">intuitivas, eficientes y visualmente impactantes</em>. Siempre en busca de nuevas fronteras en el mundo del <em class="keyword">desarrollo informático</em>.
+            </p>
+        </section>
+
+        <section id="sobre-mi" class="mb-12 py-6">
+            <h2 class="section-heading">Sobre Mí</h2>
+            <div class="text-base text-gray-700 space-y-4">
+                <p>
+                    Mi recorrido profesional, <em class="keyword">autodidacta</em> y como <em class="keyword">freelance desde 2009</em>, me ha permitido forjar una perspectiva única en el desarrollo de soluciones digitales. Desde 2020, he consolidado mi especialización en <em class="keyword">diseño UI/UX y gráfico</em>, enfocándome en crear interfaces que no solo sean estéticamente atractivas, sino también profundamente funcionales y centradas en el usuario.
+                </p>
+                <p>
+                    Impulsada por una curiosidad innata por las tecnologías emergentes, he incursionado activamente en el campo de la <em class="keyword">Inteligencia Artificial desde 2024</em>. Mi objetivo es aplicar el poder de la IA para diseñar experiencias transformadoras y eficientes, combinando mi base en diseño con las capacidades avanzadas de la tecnología para innovar y resolver problemas complejos de maneras creativas.
+                </p>
+                <p>
+                    Como aprendiz perpetua, <em class="keyword">abrazo cada desafío como una oportunidad</em> para expandir mis conocimientos y perfeccionar mis habilidades. Me apasiona construir productos que generen un impacto significativo y faciliten la vida de las personas a través de la tecnología. Mi enfoque <em class="keyword">analítico y resolutivo</em>, combinado con una <em class="keyword">comunicación efectiva</em> y una <em class="keyword">mentalidad colaborativa</em>, me permite integrarme rápidamente en equipos y contribuir al éxito de proyectos complejos. Soy <em class="keyword">proactiva</em>, <em class="keyword">organizada</em> y siempre busco la <em class="keyword">excelencia</em> en cada tarea.
+                </p>
+            </div>
+        </section>
+
+        <section id="experiencia" class="mb-12 py-6">
+            <h2 class="section-heading">Experiencia Profesional</h2>
+            <div class="space-y-6 text-base text-gray-700">
+                <div class="mb-4">
+                    <h3 class="font-semibold text-gray-800">Editora Audiovisual y Sonido | Coffee Break Señal y Ruido</h3>
+                    <p class="text-gray-600 text-sm mb-2">Marzo 2020 – Presente</p>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Responsable de la <em class="keyword">edición de audio y video</em> para el programa, asegurando la calidad y coherencia del contenido.</li>
+                        <li>Gestión integral de la <em class="keyword">producción y post-producción</em>, optimizando los flujos de trabajo para cumplir con los plazos de emisión.</li>
+                        <li>Colaboración en la <em class="keyword">conceptualización de segmentos</em> y la integración de elementos visuales y sonoros que enriquecieron la experiencia del oyente.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800">Gabinete de Restauración de Arqueoastronomía | Observatorio de Física Cósmica de San Miguel</h3>
+                    <p class="text-gray-600 text-sm mb-2">Enero 2020 – Presente</p>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li>Participación activa en la <em class="keyword">restauración y preservación</em> de instrumentos y artefactos con valor arqueoastronómico.</li>
+                        <li>Aplicación de técnicas especializadas para la <em class="keyword">recuperación de datos históricos</em> y la documentación de hallazgos.</li>
+                        <li>Colaboración en la <em class="keyword">investigación y clasificación</em> de materiales, contribuyendo a la difusión del conocimiento científico y cultural.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="mb-12 py-6">
+            <h2 class="section-heading">Proyectos Destacados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="project-card">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2" style="font-family: 'Poppins', sans-serif;">Red Social de Apoyo para la Salud Mental (Proyecto "Karen")</h3>
+                    <p class="text-gray-600 text-sm mb-3">Diseño UI/UX, Desarrollo de Plataforma Social</p>
+                    <details open class="project-details"> <summary>Detalles del Proyecto</summary>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            Concebí y desarrollé una red social innovadora, específicamente diseñada como un refugio digital para personas que enfrentan trastornos de salud mental. Mi rol incluyó la arquitectura de la interfaz de usuario y la experiencia de usuario (UI/UX) para garantizar un entorno seguro, intuitivo y de apoyo. Se implementaron funcionalidades clave para la gestión de perfiles, publicaciones, interacciones y recursos de bienestar, todo con un enfoque en la privacidad y la accesibilidad, bajo el nombre clave de <em class="keyword">"Proyecto Karen"</em>.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="tech-tag">UI/UX Design</span>
+                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">Comunidad</span>
+                            <span class="tech-tag">Salud Mental</span>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2" style="font-family: 'Poppins', sans-serif;">Portal de Psicoeducación sobre TLP con Podcast</h3>
+                    <p class="text-gray-600 text-sm mb-3">Diseño Web, Curación de Contenido, Producción de Podcast</p>
+                    <details open class="project-details">
+                        <summary>Detalles del Proyecto</summary>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            Lideré el diseño y desarrollo de una página web integral dedicada a desmitificar y proporcionar recursos sobre el <em class="keyword">Trastorno Límite de la Personalidad (TLP)</em>. Este proyecto abarcó desde la investigación y curación de contenido hasta la creación de una arquitectura de información clara y una interfaz de usuario compasiva. Una característica central fue la integración de una serie de <em class="keyword">podcasts originales</em>, donde se presentan testimonios personales, entrevistas con psicólogos y psiquiatras, y discusiones sobre estrategias de afrontamiento y manejo del TLP. El portal fue diseñado para ser una fuente confiable y accesible, fomentando la comprensión y reduciendo el estigma asociado a la condición.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="tech-tag">Web Design</span>
+                            <span class="tech-tag">Content Curation</span>
+                            <span class="tech-tag">Podcast Production</span>
+                            <span class="tech-tag">Psicoeducación</span>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2" style="font-family: 'Poppins', sans-serif;">Diseño y Desarrollo de Sitios Web Comerciales</h3>
+                    <p class="text-gray-600 text-sm mb-3">Diseño Web, UI/UX, Desarrollo Frontend</p>
+                    <details open class="project-details">
+                        <summary>Detalles del Proyecto</summary>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            Como diseñadora freelance, creé y desarrollé sitios web personalizados para diversos clientes comerciales, aplicando mis conocimientos en UI/UX y diseño gráfico para satisfacer necesidades específicas de negocio. Esto incluyó una moderna página con sistema de reservas para una peluquería y un portafolio digital para un taller de carpintería, optimizando la experiencia de usuario y la visibilidad de marca. El foco estuvo en interfaces estéticamente agradables, funcionales y que impulsaran la interacción del usuario y la conversión, demostrando mi <em class="keyword">versatilidad</em> y capacidad para adaptarme a diferentes sectores.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">Portfolio Sites</span>
+                            <span class="tech-tag">Freelance</span>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2" style="font-family: 'Poppins', sans-serif;">Liderazgo en IA: Entrenamiento de Asistentes y Taller Caelaficha</h3>
+                    <p class="text-gray-600 text-sm mb-3">Entrenamiento de IA, Diseño de Plataformas de IA, Educación</p>
+                    <details open class="project-details">
+                        <summary>Detalles del Proyecto</summary>
+                        <p class="mt-2 text-gray-700 text-sm">
+                            Desde 2024, he incursionado activamente en el campo de la Inteligencia Artificial, dedicándome al <em class="keyword">entrenamiento y optimización de asistentes de IA</em> utilizando plataformas como Google Colab. Paralelamente, soy una fuerza motriz en la estructuración y desarrollo del <em class="keyword">"Taller de Caelaficha" de IA</em>, una iniciativa que busca desmitificar y democratizar el uso de la IA. Este proyecto incluye la creación de una página web central que servirá como un hub de recursos y herramientas, permitiendo a los usuarios "materializar sus ideas a través de IA", abarcando desde la conceptualización de experiencias interactivas con IA hasta la preparación de materiales didácticos. Mi rol en este ámbito destaca mi capacidad de <em class="keyword">liderazgo</em> y mi compromiso con la <em class="keyword">innovación educativa</em>.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Google Colab</span>
+                            <span class="tech-tag">EdTech</span>
+                            <span class="tech-tag">Prompt Engineering</span>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="habilidades" class="mb-12 py-6">
+            <h2 class="section-heading">Habilidades Técnicas y Blandas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base">
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Diseño & Desarrollo Web</h3>
+                    <ul class="list-disc ml-6 text-gray-700 space-y-1">
+                        <li><em class="keyword">UI/UX Design:</em> Investigación de Usuario, Arquitectura de Información, Prototipado, Wireframing, User Flows.</li>
+                        <li><em class="keyword">Diseño Gráfico:</em> Branding, Identidad Visual, Ilustración Digital, Edición de Imagen (Adobe Photoshop, Illustrator).</li>
+                        <li><em class="keyword">Desarrollo Frontend:</em> HTML5, CSS3 (Tailwind CSS), JavaScript, Responsive Design.</li>
+                        <li><em class="keyword">Herramientas:</em> Figma, Adobe XD, Miro, Webflow (conocimiento básico).</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Inteligencia Artificial & Otros</h3>
+                    <ul class="list-disc ml-6 text-gray-700 space-y-1">
+                        <li><em class="keyword">Entrenamiento de Modelos de IA:</em> Optimización y fine-tuning de LLMs (Google Colab, entornos de desarrollo basados en Python).</li>
+                        <li><em class="keyword">Conceptualización y Desarrollo de Asistentes de IA:</em> Diseño de interacciones conversacionales y flujos de trabajo inteligentes.</li>
+                        <li><em class="keyword">Gestión de Proyectos:</em> Planificación, ejecución y seguimiento de proyectos freelance y colaborativos.</li>
+                        <li><em class="keyword">Edición Audiovisual:</em> Edición de video y audio (software profesional como Adobe Premiere, Audition).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h3 class="font-semibold text-gray-800 mb-3">Soft Skills</h3>
+                <ul class="list-disc ml-6 text-gray-700 space-y-1">
+                    <li><em class="keyword">Aprendizaje Autodidacta y Adaptabilidad:</em> Capacidad demostrada para adquirir nuevas habilidades y herramientas de forma rápida y efectiva.</li>
+                    <li><em class="keyword">Resolución de Problemas:</em> Enfoque proactivo y creativo para superar desafíos técnicos y de diseño.</li>
+                    <li><em class="keyword">Comunicación Efectiva:</em> Habilidad para transmitir ideas complejas de forma clara y concisa, tanto a perfiles técnicos como no técnicos.</li>
+                    <li><em class="keyword">Pensamiento Crítico y Analítico:</em> Destreza para analizar situaciones, identificar patrones y tomar decisiones informadas.</li>
+                    <li><em class="keyword">Colaboración y Trabajo en Equipo:</em> Facilidad para integrarse en equipos multidisciplinares y contribuir positivamente al ambiente de trabajo.</li>
+                    <li><em class="keyword">Organización y Proactividad:</em> Gestión eficiente del tiempo y las tareas, anticipando necesidades y tomando la iniciativa.</li>
+                </ul>
+            </div>
+            <div class="mt-8">
+                <h3 class="font-semibold text-gray-800 mb-3">Idiomas</h3>
+                <ul class="list-disc ml-6 text-gray-700 space-y-1">
+                    <li><em class="keyword">Español:</em> Nativo</li>
+                    <li><em class="keyword">Portugués:</em> Intermedio</li>
+                    <li><em class="keyword">Inglés:</em> Básico</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="educacion" class="mb-12 py-6">
+            <h2 class="section-heading">Educación</h2>
+            <div class="text-base text-gray-700 space-y-3">
+                <p>
+                    <strong class="font-semibold text-gray-800">Secundario Completo</strong>
+                </p>
+                <p>
+                    <strong class="font-semibold text-gray-800">Formación Autodidacta Continua:</strong> Mi trayectoria se ha forjado a través del aprendizaje constante y la inmersión directa en el diseño UI/UX, el diseño gráfico y el desarrollo de inteligencia artificial. Esta formación independiente y proactiva me ha permitido adquirir y perfeccionar conocimientos y habilidades prácticas que se alinean con las demandas actuales del mercado tecnológico.
+                </p>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-6">
+            <h2 class="section-heading">Contacto</h2>
+            <p class="text-center text-base text-gray-700 mb-6 max-w-xl mx-auto">
+                Estoy disponible para <em class="keyword">nuevas oportunidades y colaboraciones estimulantes</em>, especialmente aquellas que me permitan fusionar mi pasión por el diseño con el innovador campo del desarrollo informático y la inteligencia artificial.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center text-base">
+                <p class="text-gray-800"><strong class="font-semibold">Teléfono:</strong> +54 9 11 2765-2386</p>
+                <p class="text-gray-800"><strong class="font-semibold">Email:</strong> <a href="mailto:Mayraschwarzschild@gmail.com" class="contact-link">Mayraschwarzschild@gmail.com</a></p>
+                <p class="text-gray-800"><strong class="font-semibold">GitHub:</strong> <a href="https://github.com/MSCHWARZSCHILD" target="_blank" class="contact-link">github.com/MSCHWARZSCHILD</a></p>
+            </div>
+            <p class="text-center text-gray-500 text-sm mt-6">
+                Perú 1445 7mo N, San Telmo, CABA, Argentina
+            </p>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const element = document.getElementById('cv-content');
+            const opt = {
+                margin: 15,
+                filename: 'CV_Mayra_Schwarzschild.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+</body>
+</html>
