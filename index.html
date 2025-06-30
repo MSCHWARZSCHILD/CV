@@ -14,49 +14,36 @@
         }
         
         body {
-            background: linear-gradient(-45deg, #5e35b1, #1565c0, #00897b, #2c003e);
-            background-size: 400% 400%;
+            background: linear-gradient(135deg, #2c003e, #0a192f, #003d3d);
             color: #e0f7fa;
             line-height: 1.6;
             padding: 20px;
             min-height: 100vh;
-            animation: gradientBG 15s ease infinite;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            background-attachment: fixed;
         }
         
         .container {
             max-width: 1000px;
-            width: 100%;
             margin: 30px auto;
             background: rgba(10, 25, 47, 0.85);
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             overflow: hidden;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(100, 255, 218, 0.3);
+            border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
         header {
-            background: rgba(30, 30, 60, 0.7);
+            background: linear-gradient(90deg, #5e35b1, #1565c0, #00897b);
             padding: 40px 30px 30px;
             text-align: center;
             position: relative;
-            border-bottom: 2px solid rgba(187, 134, 252, 0.5);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
         
         .header-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
         
         h1 {
@@ -64,30 +51,12 @@
             margin-bottom: 10px;
             font-weight: 700;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            color: #bb86fc;
-        }
-        
-        .ai-badge {
-            display: inline-block;
-            background: linear-gradient(90deg, #ff6b6b, #ffa502);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 1.1rem;
-            margin-top: 10px;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
         }
         
         .subtitle {
             font-size: 1.4rem;
             margin-bottom: 20px;
-            color: #64ffda;
+            color: #bb86fc;
             font-weight: 500;
         }
         
@@ -112,11 +81,9 @@
             align-items: center;
             gap: 8px;
             font-size: 1rem;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
             padding: 8px 15px;
             border-radius: 30px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
         .content {
@@ -168,16 +135,16 @@
             background: rgba(30, 61, 89, 0.4);
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(100, 255, 218, 0.1);
         }
         
         .experience-item:hover, .project-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            border-color: rgba(187, 134, 252, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(187, 134, 252, 0.3);
         }
         
         .experience-item::before, .project-item::before {
@@ -254,14 +221,14 @@
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             border: 1px solid rgba(100, 255, 218, 0.1);
         }
         
         .skill-category:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            border-color: rgba(187, 134, 252, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(187, 134, 252, 0.3);
         }
         
         .skill-category h3 {
@@ -304,12 +271,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(100, 255, 218, 0.1);
-            transition: all 0.4s ease;
-        }
-        
-        .info-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
         
         .info-card h3 {
@@ -325,6 +286,7 @@
             line-height: 1.8;
         }
         
+        /* SECCIÓN DE CONTACTO MEJORADA */
         .contact-section {
             display: flex;
             flex-direction: column;
@@ -345,12 +307,18 @@
             flex-direction: column;
             align-items: center;
             gap: 10px;
-            transition: all 0.4s ease;
-            min-width: 200px;
+            transition: all 0.3s ease;
+            width: 200px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(30, 61, 89, 0.4);
+            border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
         .contact-icon-wrapper:hover {
             transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            background: rgba(30, 61, 89, 0.6);
         }
         
         .contact-icon-large {
@@ -362,7 +330,7 @@
             justify-content: center;
             color: white;
             font-size: 2.5rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
         
@@ -385,10 +353,14 @@
         .contact-icon-text {
             font-size: 1.1rem;
             text-align: center;
-            background: rgba(30, 61, 89, 0.6);
-            padding: 10px 20px;
-            border-radius: 30px;
-            border: 1px solid rgba(100, 255, 218, 0.2);
+            margin-top: 10px;
+        }
+        
+        .contact-info {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #81d4fa;
+            margin-top: 5px;
         }
         
         .availability {
@@ -403,7 +375,6 @@
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
-            backdrop-filter: blur(5px);
         }
         
         .location-info {
@@ -493,7 +464,6 @@
             <div class="header-content">
                 <h1>MAYRA SCHWARZSCHILD</h1>
                 <div class="subtitle">Diseñadora UI/UX & Gráfica | Especialista en Inteligencia Artificial</div>
-                <div class="ai-badge">Artificial Intelligence Specialist</div>
                 <p class="tagline">Fusionando creatividad y tecnología para transformar ideas complejas en experiencias digitales intuitivas, eficientes y visualmente impactantes. Siempre en busca de nuevas fronteras en el mundo del desarrollo informático.</p>
                 <div class="personal-info">
                     <div class="info-item">
@@ -657,26 +627,32 @@
                 
                 <div class="contact-section">
                     <div class="contact-icons">
-                        <div class="contact-icon-wrapper">
-                            <a href="https://wa.me/5491127652386" class="contact-icon-large whatsapp">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/5491127652386" class="contact-icon-wrapper" target="_blank">
+                            <div class="contact-icon-large whatsapp">
                                 <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <div class="contact-icon-text">WhatsApp: +54 9 11 2765-2386</div>
-                        </div>
+                            </div>
+                            <div class="contact-icon-text">WhatsApp</div>
+                            <div class="contact-info">+54 9 11 2765-2386</div>
+                        </a>
                         
-                        <div class="contact-icon-wrapper">
-                            <a href="mailto:Mayraschwarzschild@gmail.com" class="contact-icon-large email">
+                        <!-- Email -->
+                        <a href="mailto:Mayraschwarzschild@gmail.com" class="contact-icon-wrapper" target="_blank">
+                            <div class="contact-icon-large email">
                                 <i class="fas fa-envelope"></i>
-                            </a>
-                            <div class="contact-icon-text">Email: Mayraschwarzschild@gmail.com</div>
-                        </div>
+                            </div>
+                            <div class="contact-icon-text">Email</div>
+                            <div class="contact-info">Mayraschwarzschild@gmail.com</div>
+                        </a>
                         
-                        <div class="contact-icon-wrapper">
-                            <a href="https://github.com/MSCHWARZSCHILD" target="_blank" class="contact-icon-large github">
+                        <!-- GitHub -->
+                        <a href="https://github.com/MSCHWARZSCHILD" class="contact-icon-wrapper" target="_blank">
+                            <div class="contact-icon-large github">
                                 <i class="fab fa-github"></i>
-                            </a>
-                            <div class="contact-icon-text">GitHub: github.com/MSCHWARZSCHILD</div>
-                        </div>
+                            </div>
+                            <div class="contact-icon-text">GitHub</div>
+                            <div class="contact-info">github.com/MSCHWARZSCHILD</div>
+                        </a>
                     </div>
                     
                     <div class="availability">
@@ -693,10 +669,6 @@
         
         <footer>
             <p>Mayra Schwarzschild - Diseñadora UI/UX & Gráfica | Especialista en Inteligencia Artificial</p>
-            <div class="footer-content">
-                <i class="fab fa-github footer-icon"></i>
-                <a href="https://github.com/MSCHWARZSCHILD" target="_blank" style="color: #64ffda;">github.com/MSCHWARZSCHILD</a>
-            </div>
             <div class="update-info">Actualizado: Julio 2025</div>
         </footer>
     </div>
