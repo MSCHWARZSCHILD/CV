@@ -297,7 +297,7 @@
         
         .contact-icons {
             display: flex;
-            gap: 30px;
+            gap: 40px;
             justify-content: center;
             margin-top: 20px;
             flex-wrap: wrap;
@@ -307,10 +307,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
             transition: all 0.3s ease;
-            width: 200px;
-            padding: 20px;
+            width: 120px;
+            padding: 20px 10px;
             border-radius: 15px;
             background: rgba(30, 30, 40, 0.5);
             border: 1px solid rgba(100, 255, 218, 0.2);
@@ -336,7 +336,7 @@
         }
         
         .contact-icon-large:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
         
         .contact-icon-large.whatsapp {
@@ -349,12 +349,6 @@
         
         .contact-icon-large.github {
             background: linear-gradient(135deg, #6e5494, #4078c0);
-        }
-        
-        .contact-icon-text {
-            font-size: 1.1rem;
-            text-align: center;
-            margin-top: 10px;
         }
         
         .contact-info {
@@ -467,8 +461,7 @@
             }
             
             .contact-icons {
-                flex-direction: column;
-                align-items: center;
+                gap: 20px;
             }
         }
         
@@ -480,6 +473,22 @@
             .section-title {
                 font-size: 1.5rem;
             }
+            
+            .contact-icons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Animaciones mejoradas */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .contact-icon-large {
+            animation: pulse 3s infinite;
         }
     </style>
 </head>
@@ -670,7 +679,6 @@
                             <div class="contact-icon-large whatsapp">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
-                            <div class="contact-icon-text">WhatsApp</div>
                             <div class="contact-info">+54 9 11 2765-2386</div>
                         </a>
                         
@@ -679,7 +687,6 @@
                             <div class="contact-icon-large email">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="contact-icon-text">Email</div>
                             <div class="contact-info">Mayraschwarzschild@gmail.com</div>
                         </a>
                         
@@ -688,7 +695,6 @@
                             <div class="contact-icon-large github">
                                 <i class="fab fa-github"></i>
                             </div>
-                            <div class="contact-icon-text">GitHub</div>
                             <div class="contact-info">github.com/MSCHWARZSCHILD</div>
                         </a>
                     </div>
@@ -738,6 +744,18 @@
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Agregar efecto de pulso a los iconos de contacto
+        const contactIcons = document.querySelectorAll('.contact-icon-large');
+        contactIcons.forEach(icon => {
+            icon.addEventListener('mouseenter', () => {
+                icon.style.animation = 'pulse 0.8s infinite';
+            });
+            
+            icon.addEventListener('mouseleave', () => {
+                icon.style.animation = 'pulse 3s infinite';
+            });
         });
     </script>
 </body>
